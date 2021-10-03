@@ -1,0 +1,44 @@
+﻿<Page x:Class="LoraClient.MaturitaChice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoraClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MaturitaChice">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <EventSetter Event="Click" Handler="Button_Click"></EventSetter>
+            <Setter Property="Margin" Value="0,0,10,0"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Viewbox MaxHeight="90">
+            <StackPanel>
+                <Label Foreground="White" Content="Maturita" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></Label>
+                <Label Foreground="White" Name="fe_m_description"  Content="Hráč volí hru" HorizontalAlignment="Center" VerticalAlignment="Center" ></Label>
+            </StackPanel>
+
+        </Viewbox>
+        
+        <Viewbox Grid.Row="1" VerticalAlignment="Top" Name="fe_m_pChoices" Visibility="Hidden">
+            <StackPanel Orientation="Horizontal">
+                <Button DataContext="0" Content="Červený" Margin="10,0,10,0"></Button>
+                <Button DataContext="1" Content="Filky"></Button>
+                <Button Name="fe_m_prpo" DataContext="2" Content="Prpo" IsEnabled="False"></Button>
+                <Button DataContext="3" Content="Všechny"></Button>
+                <Button DataContext="4" Content="Bedrník"></Button>
+                <Button DataContext="5" Content="Kvarty"></Button>
+                <Button DataContext="6" Content="Desítky"></Button>
+            </StackPanel>
+        </Viewbox>
+        
+    </Grid>
+</Page>
